@@ -22,6 +22,7 @@ window.addEventListener("load", function () {
       var newTextNode = document.createTextNode(textValue);
       var addCardLink = document.createElement("a");
       var addText = document.createTextNode("Añadir una tarea...");
+      var saveButton = document.createElement('button');
       var lists;
       
       data.lists.push( {title: textValue, cards: []} );
@@ -51,14 +52,18 @@ window.addEventListener("load", function () {
         addListBtn.style.display = "inline-block";
         saveListBox.style.display = "none";
         listInputBox.value = "";
-        
-        }
+        saveButton.setAttribute('type', 'submit');
+        saveButton.setAttribute('class', 'button-insert-list');
+        saveButton.setAttribute('value', 'Añadir');
+        saveButton.textContent = 'Añadir';
+        addCardLink.appendChild(saveButton);
+   
+      }
+
     }
-    
-    
+
     
     });
-
 
 
 });
