@@ -39,11 +39,19 @@
           <a href="#"><i class="fa fa-lock" aria-hidden="true"></i>  Privado</a>
       </div>
       <div id="container">
-        <div id="add-a-list-btn">Añadir una lista...</div>
-          <div id="save-list-box">
-            <input id="list-input-box" placeholder="Añadir una lista..." />
-            <button type="button" id="save-list-btn">Guardar</button>
-          </div>
+        <!-- Este div cambiará cuando se le haga clic -->
+		<div id="add-list">
+          <span>Añadir una lista...</span>
+        </div>
+        <!-- Esta forma estará invisible hasta que el usuario haga clic sobre #add-list -->
+        <form id="main-board" class="invisible">
+		  <!-- <ul id="todo-list"></ul> -->
+		  <input type="text" placeholder="Añadir una lista..." id="title-list">
+		  <button id="save" class="button" type="submit">Guardar</button>
+		  <button id="close" class="closing-button" type="button">
+		    <span class="icon-close"></span>
+		  </button>
+		</form>
       </div>
     </main>
     <script src="js/app.js" type="text/javascript"></script>
